@@ -2,6 +2,8 @@
 
 A powerful, custom-built Discord bot designed to manage, entertain, and grow your server community. Eltrix is packed with features, from advanced moderation and a ticketing system to a complete economy and leveling system.
 
+NOT UP TO-DATE WITH VERSION 2
+
 ---
 
 ## ✨ Key Features
