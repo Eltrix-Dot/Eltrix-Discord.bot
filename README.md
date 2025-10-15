@@ -1,3 +1,4 @@
+
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/1393265882280493069/1406691590013059123/DiscoHook-Banner.png?ex=68f082e2&is=68ef3162&hm=1c4e5899a43aadbab5626b08e56c23a657b13e0de9ae11554abcb8289707acc2&" alt="Eltrix Discord Bot Banner" />
   
@@ -8,7 +9,7 @@
     <img src="https://img.shields.io/badge/License-MIT-brightgreen" alt="License: MIT" />
     <img src="https://img.shields.io/badge/Built_with-Python-informational?logo=python" alt="Built with Python" />
     <img src="https://img.shields.io/badge/Commands-50+-red" alt="More than 50 commands" />
-    </p>
+  </p>
 </div>
 
 <div align="center">
@@ -23,22 +24,22 @@ Eltrix is a **powerful, modular** Discord bot crafted in Python (`discord.py`) d
 
 ## 📖 Table of Contents
 
-- [🚀 Key Features]
-- [🛠️ Installation & Setup]
-    - [1. Prerequisites]
-    - [2. Repository Cloning]
-    - [3. Package Installation]
-    - [4. Bot Configuration]
-    - [5. Starting the Bot]
-- [📋 Command Overview])
-    - [🛡️ Moderation & Management]
-    - [🎟️ Ticket System]
-    - [📈 Leveling & XP]
-    - [💰 Economy]
-    - [🎉 Fun & Community]
-    - [⚙️ General & Utility]
-- [🤝 Contributing]
-- [📜 License]
+- [🚀 Key Features](#-key-features)
+- [🛠️ Installation & Setup](#️-installation--setup)
+    - [1. Prerequisites](#1-prerequisites)
+    - [2. Repository Cloning](#2-repository-cloning)
+    - [3. Package Installation](#3-package-installation)
+    - [4. Bot Configuration](#4-bot-configuration)
+    - [5. Starting the Bot](#5-starting-the-bot)
+- [📋 Command Overview](#-command-overview)
+    - [🛡️ Moderation & Management](#️-moderation--management-staff-only)
+    - [🎟️ Ticket System](#️-ticket-system)
+    - [📈 Leveling & XP](#-leveling--xp)
+    - [💰 Economy](#-economy)
+    - [🎉 Fun & Community](#-fun--community)
+    - [⚙️ General & Utility](#️-general--utility)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
 
 ---
 
@@ -72,17 +73,21 @@ Download the code to your machine.
 ```bash
 git clone [https://github.com/Eltrix-Dot/Eltrix-Discord.bot](https://github.com/Eltrix-Dot/Eltrix-Discord.bot)
 cd Eltrix-Discord.bot
-3. Package Installation
-The bot requires a few Python libraries to run. Make sure your requirements.txt includes the necessary packages and execute the following command:
+````
 
-```Bash
+### 3\. Package Installation
 
+The bot requires a few Python libraries to run. Make sure your `requirements.txt` includes the necessary packages and execute the following command:
+
+```bash
 pip install -r requirements.txt
-4. Bot Configuration
-Open the ELTRIX.py file and fill in the configuration section at the top. This is the most crucial step.
+```
 
-Python
+### 4\. Bot Configuration
 
+Open the `ELTRIX.py` file and fill in the configuration section at the top. This is the most crucial step.
+
+```python
 # =============================================================================
 # 1. CONFIGURATION
 # =============================================================================
@@ -100,102 +105,131 @@ STAFF_ROLE_IDS = {
 # Owner ID (Your own user ID)
 OWNER_ID = "YOUR_USER_ID_HERE"
 # ... (Further configuration like TICKET_CATEGORIES etc. follows in the file)
-🔎 How to find IDs? Enable "Developer Mode" in Discord: User Settings > Advanced > Developer Mode. Then, right-click on a server, channel, role, or user and select "Copy ID".
+```
 
-5. Starting the Bot
-Once everything is installed and configured, you can start the bot using the following command in your terminal:
+> **🔎 How to find IDs?** Enable "Developer Mode" in Discord: `User Settings > Advanced > Developer Mode`. Then, right-click on a server, channel, role, or user and select "Copy ID".
 
-Bash
+### 5\. Starting the Bot
 
+Start the bot using the following command in your terminal:
+
+```bash
 python ELTRIX.py
+```
+
 If successful, you will see a confirmation in the terminal that the bot is online and has synchronized its commands.
 
-📋 Command Overview
-All commands are available via Discord's / Slash Commands.
+-----
 
-🛡️ Moderation & Management (Staff Only)
-These commands are generally only for staff.
+## 📋 Command Overview
 
-Command	Description
-/warn <user> <reason>	Warns a user, logs it, and sends a DM.
-/warnings <user>	Views all warnings for a user.
-/mute <user> <minutes> <reason>	Places a user in timeout.
-/unmute <user>	Removes the timeout from a user.
-/kick <user> <reason>	Kicks a user from the server.
-/ban <user> <reason>	Bans a user from the server.
-/softban <user> <reason>	Bans and unbans a user immediately to clear recent messages.
-/purge <amount>	Deletes a specified number of messages (1-100).
-/lock [channel]	Locks a text channel for the @everyone role.
-/lockdown	Locks all text channels in the server.
-/announce <title> <description>	Creates an announcement in an embed.
-/history <user>	Shows a combined history of warnings and notes.
-/altcheck <user>	Checks account age to flag possible alt accounts.
+All commands are available via Discord's `/` Slash Commands.
 
-Exporteren naar Spreadsheets
-🎟️ Ticket System
-Command	Description
-/ticketsetup	Creates the panel for users to create tickets.
-/ticketclaim	Claims the current ticket to signal you are working on it.
-/ticketadd <user>	Adds a user to the current ticket.
-/ticketdelete	Permanently deletes a closed ticket channel and saves a transcript.
+### 🛡️ Moderation & Management *(Staff Only)*
 
-Exporteren naar Spreadsheets
-📈 Leveling & XP
-Command	Description
-/rank [user]	Displays a visual rank card with level and XP.
-/levelboard	Shows the leaderboard for levels.
-/setxp user <user> <amount>	Sets the XP of a specific user. (Staff)
-/setlevelrole <level> <role>	Sets a role as a reward for reaching a level. (Staff)
+| Command | Description |
+| :--- | :--- |
+| `/warn <user> <reason>` | Warns a user, logs it, and sends a DM. |
+| `/warnings <user>` | Views all warnings for a user. |
+| `/clearwarnings <user>` | Removes all warnings for a user. |
+| `/mute <user> <minutes> <reason>` | Places a user in a timeout. |
+| `/unmute <user>` | Removes the timeout from a user. |
+| `/kick <user> <reason>` | Kicks a user from the server. |
+| `/ban <user> <reason>` | Bans a user from the server. |
+| `/softban <user> <reason>` | Bans and unbans a user immediately to clear their recent messages. |
+| `/purge <amount>` | Deletes a specified number of messages (1-100). |
+| `/lock [channel]` | Locks a text channel for the `@everyone` role. |
+| `/unlock [channel]` | Unlocks a text channel. |
+| `/lockdown` | Locks **all** text channels in the server. |
+| `/unlockdown` | Lifts a server-wide lockdown. |
+| `/slowmode <seconds> [channel]` | Sets a slow mode for a channel (0 to disable). |
+| `/announce <title> <description>` | Creates an announcement in an embed. |
+| `/history <user>` | Shows a combined history of warnings and notes. |
+| `/altcheck <user>` | Checks account age to flag possible alt accounts. |
+| `/massmove <from> <to>` | Moves all members from one voice channel to another. |
 
-Exporteren naar Spreadsheets
-💰 Economy
-Command	Description
-/balance [user]	Checks the balance (wallet and bank).
-/daily	Claims your daily coin reward.
-/gamble <amount>	Takes a gamble with a 50% chance to double your stake.
-/invest <amount>	Invests your coins with a chance of profit or loss after 24 hours.
-`/bank deposit/withdraw <amount	all>`
-/rep <user>	Gives a reputation point to a user (once every 24 hours).
+### 🎟️ Ticket System
 
-Exporteren naar Spreadsheets
-🎉 Fun & Community
-Command	Description
-/poll <question> <options...>	Creates a poll with up to 5 options.
-/suggest <idea>	Submits a suggestion for the server.
-/meme [subreddit]	Fetches a random meme from Reddit.
-/8ball <question>	Asks the magical 8-ball for advice.
-/ship <user1> <user2>	Calculates love compatibility.
-/roast <user>	Delivers a funny (but friendly) roast.
-/hug, /pat, /slap <user>	Interaction commands.
-/urban <term>	Searches Urban Dictionary for a term (NSFW channels only).
+| Command | Description |
+| :--- | :--- |
+| `/ticketsetup` | Creates the panel for users to create tickets. |
+| `/ticketclaim` | Claims the current ticket to signal you are working on it. |
+| `/ticketadd <user>` | Adds a user to the current ticket. |
+| `/ticketremove <user>` | Removes a user from the current ticket. |
+| `/ticketdelete` | Permanently deletes a closed ticket channel and saves a transcript. |
 
-Exporteren naar Spreadsheets
-⚙️ General & Utility
-Command	Description
-/about	Shows information about the bot, including the original creator.
-/ping	Checks the bot's reaction speed (latency).
-/userinfo [user]	Shows detailed information about a user.
-/remindme <time> <reminder>	Sets a personal reminder.
-/afk [status]	Sets or removes your AFK status.
-/tag use <name>	Uses a reusable, custom tag.
-/botinvite	Generates an invite link for the bot.
+### 📈 Leveling & XP
 
-🤝 Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+| Command | Description |
+| :--- | :--- |
+| `/rank [user]` | Displays a visual rank card with level and XP. |
+| `/levelboard` | Shows the leaderboard for levels. |
+| `/setxp user <user> <amount>` | Sets the XP of a specific user. *(Staff)* |
+| `/setlevelrole <level> <role>` | Sets a role as a reward for reaching a level. *(Staff)* |
+| `/removelevelrole <level>` | Removes a role reward from a level. *(Staff)* |
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+### 💰 Economy
 
-Fork the Project
+| Command | Description |
+| :--- | :--- |
+| `/balance [user]` | Checks the balance (wallet and bank). |
+| `/daily` | Claims your daily coin reward. |
+| `/leaderboard` | Shows the leaderboard of the wealthiest users. |
+| `/give <user> <amount>` | Gives coins to another user. |
+| `/gamble <amount>` | Takes a gamble with a 50% chance to double your stake. |
+| `/invest <amount>` | Invests your coins with a chance of profit or loss after 24 hours. |
+| `/bank deposit <amount|all>` | Deposits coins from your wallet to your bank. |
+| `/bank withdraw <amount|all>` | Withdraws coins from your bank to your wallet. |
+| `/rep <user>` | Gives a reputation point to a user (once every 24 hours). |
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
+### 🎉 Fun & Community
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+| Command | Description |
+| :--- | :--- |
+| `/poll <question> <options...>` | Creates a poll with up to 5 options. |
+| `/suggest <idea>` | Submits a suggestion for the server. |
+| `/meme [subreddit]` | Fetches a random meme from Reddit. |
+| `/8ball <question>` | Asks the magical 8-ball for advice. |
+| `/ship <user1> <user2>` | Calculates love compatibility. |
+| `/roast <user>` | Delivers a funny (but friendly) roast. |
+| `/hug, /pat, /slap <user>` | Interaction commands. |
+| `/urban <term>` | Searches Urban Dictionary for a term (NSFW channels only). |
 
-Push to the Branch (git push origin feature/AmazingFeature)
+### ⚙️ General & Utility
 
-Open a Pull Request
+| Command | Description |
+| :--- | :--- |
+| `/about` | Shows information about the bot, including the original creator. |
+| `/ping` | Checks the bot's reaction speed (latency). |
+| `/uptime` | Shows how long the bot has been online. |
+| `/userinfo [user]` | Shows detailed information about a user. |
+| `/serverinfo` | Displays detailed statistics about the server. |
+| `/remindme <time> <reminder>` | Sets a personal reminder. |
+| `/afk [status]` | Sets or removes your AFK status. |
+| `/tag use <name>` | Uses a reusable, custom tag. |
+| `/botinvite` | Generates an invite link for the bot. |
 
-📜 License
-This project is distributed under the MIT License. This means you are free to use, modify, and distribute the code, as long as you include the original license and copyright notice.
+-----
 
-Copyright (c) 2025 [Eltrix-Dot]
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this project better, please fork the repository and create a pull request. You can also simply open an **Issue** with the tag "enhancement".
+
+1.  **Fork** the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a **Pull Request**
+
+-----
+
+## 📜 License
+
+This project is distributed under the **MIT License**. This means you are free to use, modify, and distribute the code, as long as you include the original license and copyright notice.
+
+**Copyright (c) 2025 [Eltrix-Dot]**
+
+```
+```
