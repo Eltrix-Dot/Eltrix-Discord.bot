@@ -24,22 +24,22 @@ Eltrix is a **powerful, modular** Discord bot crafted in Python (`discord.py`) d
 
 ## 📖 Table of Contents
 
-- [🚀 Key Features](#-key-features)
-- [🛠️ Installation & Setup](#️-installation--setup)
-    - [1. Prerequisites](#1-prerequisites)
-    - [2. Repository Cloning](#2-repository-cloning)
-    - [3. Package Installation](#3-package-installation)
-    - [4. Bot Configuration](#4-bot-configuration)
-    - [5. Starting the Bot](#5-starting-the-bot)
-- [📋 Command Overview](#-command-overview)
-    - [🛡️ Moderation & Management](#️-moderation--management-staff-only)
-    - [🎟️ Ticket System](#️-ticket-system)
-    - [📈 Leveling & XP](#-leveling--xp)
-    - [💰 Economy](#-economy)
-    - [🎉 Fun & Community](#-fun--community)
-    - [⚙️ General & Utility](#️-general--utility)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
+- [🚀 Key Features]
+- [🛠️ Installation & Setup]
+    - [1. Prerequisites]
+    - [2. Repository Cloning]
+    - [3. Package Installation]
+    - [4. Bot Configuration]
+    - [5. Starting the Bot]
+- [📋 Command Overview]
+    - [🛡️ Moderation & Management])
+    - [🎟️ Ticket System]
+    - [📈 Leveling & XP]
+    - [💰 Economy]
+    - [🎉 Fun & Community]
+    - [⚙️ General & Utility]
+- [🤝 Contributing]
+- [📜 License]
 
 ---
 
