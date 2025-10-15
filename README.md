@@ -1,4 +1,4 @@
-<img alt="Version 2" src="https://img.shields.io/badge/Version-2-white?colorA=lightgray&colorB=white" />
+<img alt="Version 2" src="https://img.shields.io/badge/Version-2-white?colorA=lightgray&colorB=white" />  <img alt="Eltrix Bot Badge" src="https://img.shields.io/badge/Eltrix-Bot-white?colorA=333&colorB=fff" />
 # Eltrix Discord Bot
 
 A powerful, custom-built Discord bot designed to manage, entertain, and grow your server community. Eltrix is packed with features, from advanced moderation and a ticketing system to a complete economy and leveling system.
