@@ -9,10 +9,10 @@
 
 <br>
 
-![Version](https://img.shields.io/badge/Version-3.0-blue)
+![Version](https://img.shields.io/badge/Version-3.1-blue)
 ![Python](https://img.shields.io/badge/Python-3.11+-yellow?logo=python)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Commands](https://img.shields.io/badge/Commands-50+-red)
+![Commands](https://img.shields.io/badge/Commands-70+-red)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 </div>
