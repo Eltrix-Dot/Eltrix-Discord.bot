@@ -280,7 +280,7 @@ git push origin feature/AmazingFeature
 
 Distributed under the **MIT License**
 
-Copyright © 2025
+Copyright © 2026
 **Eltrix-Dot**
 
 ---
