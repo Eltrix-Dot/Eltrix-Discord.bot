@@ -5,7 +5,8 @@
 
 <div align="center">
 
-<img src="https://cdn.discordapp.com/attachments/1393265882280493069/1406691590013059123/DiscoHook-Banner.png" width="900"/>
+<img src="<img width="1500" height="450" alt="image" src="https://github.com/user-attachments/assets/0b66b6f0-7db0-4c9e-8f92-8bc74e7e63bf" />
+" width="900"/>
 
 <br>
 
