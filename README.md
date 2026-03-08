@@ -1,4 +1,3 @@
-
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/1393265882280493069/1406691590013059123/DiscoHook-Banner.png?ex=68f082e2&is=68ef3162&hm=1c4e5899a43aadbab5626b08e56c23a657b13e0de9ae11554abcb8289707acc2&" alt="Eltrix Discord Bot Banner" />
   
@@ -24,22 +23,22 @@ Eltrix is a **powerful, modular** Discord bot crafted in Python (`discord.py`) d
 
 ## 📖 Table of Contents
 
-- [🚀 Key Features]
-- [🛠️ Installation & Setup]
-    - [1. Prerequisites]
-    - [2. Repository Cloning]
-    - [3. Package Installation]
-    - [4. Bot Configuration]
-    - [5. Starting the Bot]
-- [📋 Command Overview]
-    - [🛡️ Moderation & Management])
-    - [🎟️ Ticket System]
-    - [📈 Leveling & XP]
-    - [💰 Economy]
-    - [🎉 Fun & Community]
-    - [⚙️ General & Utility]
-- [🤝 Contributing]
-- [📜 License]
+- 🚀 Key Features
+- 🛠️ Installation & Setup
+    - 1. Prerequisites
+    - 2. Repository Cloning
+    - 3. Package Installation
+    - 4. Bot Configuration
+    - 5. Starting the Bot
+- 📋 Command Overview
+    - 🛡️ Moderation & Management
+    - 🎟️ Ticket System
+    - 📈 Leveling & XP
+    - 💰 Economy
+    - 🎉 Fun & Community
+    - ⚙️ General & Utility
+- 🤝 Contributing
+- 📜 License
 
 ---
 
@@ -62,8 +61,8 @@ Follow these steps to run the Eltrix bot on your own server.
 
 ### 1. Prerequisites
 
-* **Python 3.11** or newer. Download Python from [python.org](https://www.python.org/).
-* A **Discord Bot Token**. You can create a bot application and get a token via the [Discord Developer Portal](https://discord.com/developers/applications).
+* **Python 3.11** or newer. Download Python from python.org.
+* A **Discord Bot Token**. You can create a bot application and get a token via the Discord Developer Portal.
     * ⚠️ **ATTENTION:** Ensure you enable the **Privileged Gateway Intents** (`Server Members Intent` and `Message Content Intent`) for your bot in the Developer Portal.
 
 ### 2. Repository Cloning
@@ -71,23 +70,18 @@ Follow these steps to run the Eltrix bot on your own server.
 Download the code to your machine.
 
 ```bash
-git clone [https://github.com/Eltrix-Dot/Eltrix-Discord.bot](https://github.com/Eltrix-Dot/Eltrix-Discord.bot)
+git clone https://github.com/Eltrix-Dot/Eltrix-Discord.bot
 cd Eltrix-Discord.bot
-````
+3. Package Installation
+The bot requires a few Python libraries to run. Make sure your requirements.txt includes the necessary packages and execute the following command:
 
-### 3\. Package Installation
-
-The bot requires a few Python libraries to run. Make sure your `requirements.txt` includes the necessary packages and execute the following command:
-
-```bash
+bash
 pip install -r requirements.txt
-```
+4. Bot Configuration
+Open the ELTRIX.py file and fill in the configuration section at the top. This is the most crucial step.
 
-### 4\. Bot Configuration
-
-Open the `ELTRIX.py` file and fill in the configuration section at the top. This is the most crucial step.
-
-```python
+python
+ Show full code block 
 # =============================================================================
 # 1. CONFIGURATION
 # =============================================================================
@@ -105,131 +99,95 @@ STAFF_ROLE_IDS = {
 # Owner ID (Your own user ID)
 OWNER_ID = "YOUR_USER_ID_HERE"
 # ... (Further configuration like TICKET_CATEGORIES etc. follows in the file)
-```
+🔎 How to find IDs? Enable "Developer Mode" in Discord: User Settings > Advanced > Developer Mode. Then, right-click on a server, channel, role, or user and select "Copy ID".
 
-> **🔎 How to find IDs?** Enable "Developer Mode" in Discord: `User Settings > Advanced > Developer Mode`. Then, right-click on a server, channel, role, or user and select "Copy ID".
-
-### 5\. Starting the Bot
-
+5. Starting the Bot
 Start the bot using the following command in your terminal:
 
-```bash
+bash
 python ELTRIX.py
-```
-
 If successful, you will see a confirmation in the terminal that the bot is online and has synchronized its commands.
 
------
+📋 Command Overview
+All commands are available via Discord's / Slash Commands.
 
-## 📋 Command Overview
+🛡️ Moderation & Management (Staff Only)
+Command	Description
+/warn <user> <reason>	Warns a user, logs it, and sends a DM.
+/warnings <user>	Views all warnings for a user.
+/clearwarnings <user>	Removes all warnings for a user.
+/mute <user> <minutes> <reason>	Places a user in a timeout.
+/unmute <user>	Removes the timeout from a user.
+/kick <user> <reason>	Kicks a user from the server.
+/ban <user> <reason>	Bans a user from the server.
+/softban <user> <reason>	Bans and unbans a user immediately to clear their recent messages.
+/purge <amount>	Deletes a specified number of messages (1-100).
+/lock [channel]	Locks a text channel for the @everyone role.
+/unlock [channel]	Unlocks a text channel.
+/lockdown	Locks all text channels in the server.
+/unlockdown	Lifts a server-wide lockdown.
+/slowmode <seconds> [channel]	Sets a slow mode for a channel (0 to disable).
+/announce <title> <description>	Creates an announcement in an embed.
+/history <user>	Shows a combined history of warnings and notes.
+/altcheck <user>	Checks account age to flag possible alt accounts.
+/massmove <from> <to>	Moves all members from one voice channel to another.
+🎟️ Ticket System
+Command	Description
+/ticketsetup	Creates the panel for users to create tickets.
+/ticketclaim	Claims the current ticket to signal you are working on it.
+/ticketadd <user>	Adds a user to the current ticket.
+/ticketremove <user>	Removes a user from the current ticket.
+/ticketdelete	Permanently deletes a closed ticket channel and saves a transcript.
+📈 Leveling & XP
+Command	Description
+/rank [user]	Displays a visual rank card with level and XP.
+/levelboard	Shows the leaderboard for levels.
+/setxp user <user> <amount>	Sets the XP of a specific user. (Staff)
+/setlevelrole <level> <role>	Sets a role as a reward for reaching a level. (Staff)
+/removelevelrole <level>	Removes a role reward from a level. (Staff)
+💰 Economy
+Command	Description
+/balance [user]	Checks the balance (wallet and bank).
+/daily	Claims your daily coin reward.
+/leaderboard	Shows the leaderboard of the wealthiest users.
+/give <user> <amount>	Gives coins to another user.
+/gamble <amount>	Takes a gamble with a 50% chance to double your stake.
+/invest <amount>	Invests your coins with a chance of profit or loss after 24 hours.
+`/bank deposit <amount	all>`
+`/bank withdraw <amount	all>`
+/rep <user>	Gives a reputation point to a user (once every 24 hours).
+🎉 Fun & Community
+Command	Description
+/poll <question> <options...>	Creates a poll with up to 5 options.
+/suggest <idea>	Submits a suggestion for the server.
+/meme [subreddit]	Fetches a random meme from Reddit.
+/8ball <question>	Asks the magical 8-ball for advice.
+/ship <user1> <user2>	Calculates love compatibility.
+/roast <user>	Delivers a funny (but friendly) roast.
+/hug, /pat, /slap <user>	Interaction commands.
+/urban <term>	Searches Urban Dictionary for a term (NSFW channels only).
+⚙️ General & Utility
+Command	Description
+/about	Shows information about the bot, including the original creator.
+/ping	Checks the bot's reaction speed (latency).
+/uptime	Shows how long the bot has been online.
+/userinfo [user]	Shows detailed information about a user.
+/serverinfo	Displays detailed statistics about the server.
+/remindme <time> <reminder>	Sets a personal reminder.
+/afk [status]	Sets or removes your AFK status.
+/tag use <name>	Uses a reusable, custom tag.
+/botinvite	Generates an invite link for the bot.
+🤝 Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-All commands are available via Discord's `/` Slash Commands.
+If you have a suggestion that would make this project better, please fork the repository and create a pull request. You can also simply open an Issue with the tag "enhancement".
 
-### 🛡️ Moderation & Management *(Staff Only)*
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+📜 License
+This project is distributed under the MIT License. This means you are free to use, modify, and distribute the code, as long as you include the original license and copyright notice.
 
-| Command | Description |
-| :--- | :--- |
-| `/warn <user> <reason>` | Warns a user, logs it, and sends a DM. |
-| `/warnings <user>` | Views all warnings for a user. |
-| `/clearwarnings <user>` | Removes all warnings for a user. |
-| `/mute <user> <minutes> <reason>` | Places a user in a timeout. |
-| `/unmute <user>` | Removes the timeout from a user. |
-| `/kick <user> <reason>` | Kicks a user from the server. |
-| `/ban <user> <reason>` | Bans a user from the server. |
-| `/softban <user> <reason>` | Bans and unbans a user immediately to clear their recent messages. |
-| `/purge <amount>` | Deletes a specified number of messages (1-100). |
-| `/lock [channel]` | Locks a text channel for the `@everyone` role. |
-| `/unlock [channel]` | Unlocks a text channel. |
-| `/lockdown` | Locks **all** text channels in the server. |
-| `/unlockdown` | Lifts a server-wide lockdown. |
-| `/slowmode <seconds> [channel]` | Sets a slow mode for a channel (0 to disable). |
-| `/announce <title> <description>` | Creates an announcement in an embed. |
-| `/history <user>` | Shows a combined history of warnings and notes. |
-| `/altcheck <user>` | Checks account age to flag possible alt accounts. |
-| `/massmove <from> <to>` | Moves all members from one voice channel to another. |
-
-### 🎟️ Ticket System
-
-| Command | Description |
-| :--- | :--- |
-| `/ticketsetup` | Creates the panel for users to create tickets. |
-| `/ticketclaim` | Claims the current ticket to signal you are working on it. |
-| `/ticketadd <user>` | Adds a user to the current ticket. |
-| `/ticketremove <user>` | Removes a user from the current ticket. |
-| `/ticketdelete` | Permanently deletes a closed ticket channel and saves a transcript. |
-
-### 📈 Leveling & XP
-
-| Command | Description |
-| :--- | :--- |
-| `/rank [user]` | Displays a visual rank card with level and XP. |
-| `/levelboard` | Shows the leaderboard for levels. |
-| `/setxp user <user> <amount>` | Sets the XP of a specific user. *(Staff)* |
-| `/setlevelrole <level> <role>` | Sets a role as a reward for reaching a level. *(Staff)* |
-| `/removelevelrole <level>` | Removes a role reward from a level. *(Staff)* |
-
-### 💰 Economy
-
-| Command | Description |
-| :--- | :--- |
-| `/balance [user]` | Checks the balance (wallet and bank). |
-| `/daily` | Claims your daily coin reward. |
-| `/leaderboard` | Shows the leaderboard of the wealthiest users. |
-| `/give <user> <amount>` | Gives coins to another user. |
-| `/gamble <amount>` | Takes a gamble with a 50% chance to double your stake. |
-| `/invest <amount>` | Invests your coins with a chance of profit or loss after 24 hours. |
-| `/bank deposit <amount|all>` | Deposits coins from your wallet to your bank. |
-| `/bank withdraw <amount|all>` | Withdraws coins from your bank to your wallet. |
-| `/rep <user>` | Gives a reputation point to a user (once every 24 hours). |
-
-### 🎉 Fun & Community
-
-| Command | Description |
-| :--- | :--- |
-| `/poll <question> <options...>` | Creates a poll with up to 5 options. |
-| `/suggest <idea>` | Submits a suggestion for the server. |
-| `/meme [subreddit]` | Fetches a random meme from Reddit. |
-| `/8ball <question>` | Asks the magical 8-ball for advice. |
-| `/ship <user1> <user2>` | Calculates love compatibility. |
-| `/roast <user>` | Delivers a funny (but friendly) roast. |
-| `/hug, /pat, /slap <user>` | Interaction commands. |
-| `/urban <term>` | Searches Urban Dictionary for a term (NSFW channels only). |
-
-### ⚙️ General & Utility
-
-| Command | Description |
-| :--- | :--- |
-| `/about` | Shows information about the bot, including the original creator. |
-| `/ping` | Checks the bot's reaction speed (latency). |
-| `/uptime` | Shows how long the bot has been online. |
-| `/userinfo [user]` | Shows detailed information about a user. |
-| `/serverinfo` | Displays detailed statistics about the server. |
-| `/remindme <time> <reminder>` | Sets a personal reminder. |
-| `/afk [status]` | Sets or removes your AFK status. |
-| `/tag use <name>` | Uses a reusable, custom tag. |
-| `/botinvite` | Generates an invite link for the bot. |
-
------
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this project better, please fork the repository and create a pull request. You can also simply open an **Issue** with the tag "enhancement".
-
-1.  **Fork** the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a **Pull Request**
-
------
-
-## 📜 License
-
-This project is distributed under the **MIT License**. This means you are free to use, modify, and distribute the code, as long as you include the original license and copyright notice.
-
-**Copyright (c) 2025 [Eltrix-Dot]**
-
-```
-```
+Copyright (c) 2025 [Eltrix-Dot]
