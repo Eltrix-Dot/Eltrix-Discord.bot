@@ -1,193 +1,301 @@
-<div align="center">
-  <img src="https://cdn.discordapp.com/attachments/1393265882280493069/1406691590013059123/DiscoHook-Banner.png?ex=68f082e2&is=68ef3162&hm=1c4e5899a43aadbab5626b08e56c23a657b13e0de9ae11554abcb8289707acc2&" alt="Eltrix Discord Bot Banner" />
-  
-  <br/>
-  
-  <p>
-    <img src="https://img.shields.io/badge/Version-v3.0-blue" alt="Version 3.0" />
-    <img src="https://img.shields.io/badge/License-MIT-brightgreen" alt="License: MIT" />
-    <img src="https://img.shields.io/badge/Built_with-Python-informational?logo=python" alt="Built with Python" />
-    <img src="https://img.shields.io/badge/Commands-50+-red" alt="More than 50 commands" />
-  </p>
-</div>
+
+# ✨ Eltrix Discord Bot
+
+### The All-in-One Discord Server Manager
 
 <div align="center">
-  
-# ✨ Eltrix Discord Bot | The All-in-One Server Manager
 
-Eltrix is a **powerful, modular** Discord bot crafted in Python (`discord.py`) designed to automate your server management while engaging your community with fun and unique features. From advanced moderation to a vibrant economy system, Eltrix has it all.
+<img src="https://cdn.discordapp.com/attachments/1393265882280493069/1406691590013059123/DiscoHook-Banner.png" width="900"/>
+
+<br>
+
+![Version](https://img.shields.io/badge/Version-3.0-blue)
+![Python](https://img.shields.io/badge/Python-3.11+-yellow?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Commands](https://img.shields.io/badge/Commands-50+-red)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 </div>
 
 ---
 
-## 📖 Table of Contents
+## 🚀 About Eltrix
 
-- 🚀 Key Features
-- 🛠️ Installation & Setup
-    - 1. Prerequisites
-    - 2. Repository Cloning
-    - 3. Package Installation
-    - 4. Bot Configuration
-    - 5. Starting the Bot
-- 📋 Command Overview
-    - 🛡️ Moderation & Management
-    - 🎟️ Ticket System
-    - 📈 Leveling & XP
-    - 💰 Economy
-    - 🎉 Fun & Community
-    - ⚙️ General & Utility
-- 🤝 Contributing
-- 📜 License
+**Eltrix** is a powerful **multi-purpose Discord bot** built with **Python and discord.py**.
+
+It helps you **manage, moderate and grow your Discord server** with a complete suite of tools including moderation, leveling systems, tickets, economy features, and fun community commands.
+
+Eltrix focuses on:
+
+* ⚡ Performance
+* 🧩 Modular architecture
+* 🛡️ Advanced moderation
+* 🎮 Community engagement
 
 ---
 
-## 🚀 Key Features
+# 📦 Features
 
-| Icon | Section | Description |
-| :---: | :--- | :--- |
-| 🛡️ | **Comprehensive Moderation** | A complete suite of tools, including warnings, mutes, kicks, bans, softbans, detailed logging, and channel management. |
-| 🎟️ | **Advanced Ticket System** | A multi-category ticket system with staff roles, transcripts, and full ticket lifecycle control. |
-| 📈 | **Engaging Leveling System** | Reward active users with XP, levels, and automated role rewards. |
-| 💰 | **Fun Economy** | Earn daily coins, gamble, invest, and climb the global leaderboard. |
-| 🎨 | **Custom Role Menus** | Let users self-assign roles via interactive dropdown menus to personalize their profile. |
-| 🎉 | **Fun & Community** | Keep your community engaged with polls, memes, suggestions, and interactive games. |
+| Category           | Description                                              |
+| ------------------ | -------------------------------------------------------- |
+| 🛡️ Moderation     | Warn, mute, kick, ban, purge, slowmode, lockdown system  |
+| 🎟️ Ticket System  | Multi-category support with transcripts and staff claims |
+| 📈 Leveling System | XP system with role rewards                              |
+| 💰 Economy         | Coins, daily rewards, gambling and investments           |
+| 🎨 Role Menus      | Self-assign roles with dropdown menus                    |
+| 🎉 Community       | Polls, memes, games and social commands                  |
 
 ---
 
-## 🛠️ Installation & Setup
+# 🛠️ Installation
 
-Follow these steps to run the Eltrix bot on your own server.
+## 1️⃣ Requirements
 
-### 1. Prerequisites
+Before installing, make sure you have:
 
-* **Python 3.11** or newer. Download Python from python.org.
-* A **Discord Bot Token**. You can create a bot application and get a token via the Discord Developer Portal.
-    * ⚠️ **ATTENTION:** Ensure you enable the **Privileged Gateway Intents** (`Server Members Intent` and `Message Content Intent`) for your bot in the Developer Portal.
+* **Python 3.11+**
+* **Git**
+* A **Discord Bot Token**
 
-### 2. Repository Cloning
+Create a bot here:
 
-Download the code to your machine.
+👉 [https://discord.com/developers/applications](https://discord.com/developers/applications)
+
+Enable these **Privileged Gateway Intents**
+
+* Server Members Intent
+* Message Content Intent
+
+---
+
+# 2️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Eltrix-Dot/Eltrix-Discord.bot
 cd Eltrix-Discord.bot
-3. Package Installation
-The bot requires a few Python libraries to run. Make sure your requirements.txt includes the necessary packages and execute the following command:
+```
 
-bash
+---
+
+# 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4. Bot Configuration
-Open the ELTRIX.py file and fill in the configuration section at the top. This is the most crucial step.
+```
 
-python
- Show full code block 
-# =============================================================================
-# 1. CONFIGURATION
-# =============================================================================
-# Bot Token (Keep this SECRET!)
-TOKEN = "YOUR_BOT_TOKEN_HERE"
-# Guild ID (The ID of your server)
+---
+
+# 4️⃣ Configure the Bot
+
+Open:
+
+```
+ELTRIX.py
+```
+
+Edit the configuration section.
+
+```python
+# ==============================
+# CONFIGURATION
+# ==============================
+
+TOKEN = "YOUR_BOT_TOKEN"
+
 GUILD_ID = 123456789012345678
-# Log channel ID (The ID of the channel for logs)
+
 LOG_CHANNEL_ID = 123456789012345678
-# Staff IDs (Role IDs of your staff)
+
 STAFF_ROLE_IDS = {
-    123456789012345678, # Staff Role ID
-    123456789012345679, # Admin Role ID
+    123456789012345678,
+    123456789012345679
 }
-# Owner ID (Your own user ID)
-OWNER_ID = "YOUR_USER_ID_HERE"
-# ... (Further configuration like TICKET_CATEGORIES etc. follows in the file)
-🔎 How to find IDs? Enable "Developer Mode" in Discord: User Settings > Advanced > Developer Mode. Then, right-click on a server, channel, role, or user and select "Copy ID".
 
-5. Starting the Bot
-Start the bot using the following command in your terminal:
+OWNER_ID = 123456789012345678
+```
 
-bash
+---
+
+### 🔎 How to find Discord IDs
+
+Enable **Developer Mode**
+
+```
+Discord Settings
+→ Advanced
+→ Developer Mode
+```
+
+Then:
+
+Right click → **Copy ID**
+
+Works for:
+
+* Users
+* Roles
+* Channels
+* Servers
+
+---
+
+# ▶️ Starting the Bot
+
+Run the bot with:
+
+```bash
 python ELTRIX.py
-If successful, you will see a confirmation in the terminal that the bot is online and has synchronized its commands.
+```
 
-📋 Command Overview
-All commands are available via Discord's / Slash Commands.
+If everything works you should see:
 
-🛡️ Moderation & Management (Staff Only)
-Command	Description
-/warn <user> <reason>	Warns a user, logs it, and sends a DM.
-/warnings <user>	Views all warnings for a user.
-/clearwarnings <user>	Removes all warnings for a user.
-/mute <user> <minutes> <reason>	Places a user in a timeout.
-/unmute <user>	Removes the timeout from a user.
-/kick <user> <reason>	Kicks a user from the server.
-/ban <user> <reason>	Bans a user from the server.
-/softban <user> <reason>	Bans and unbans a user immediately to clear their recent messages.
-/purge <amount>	Deletes a specified number of messages (1-100).
-/lock [channel]	Locks a text channel for the @everyone role.
-/unlock [channel]	Unlocks a text channel.
-/lockdown	Locks all text channels in the server.
-/unlockdown	Lifts a server-wide lockdown.
-/slowmode <seconds> [channel]	Sets a slow mode for a channel (0 to disable).
-/announce <title> <description>	Creates an announcement in an embed.
-/history <user>	Shows a combined history of warnings and notes.
-/altcheck <user>	Checks account age to flag possible alt accounts.
-/massmove <from> <to>	Moves all members from one voice channel to another.
-🎟️ Ticket System
-Command	Description
-/ticketsetup	Creates the panel for users to create tickets.
-/ticketclaim	Claims the current ticket to signal you are working on it.
-/ticketadd <user>	Adds a user to the current ticket.
-/ticketremove <user>	Removes a user from the current ticket.
-/ticketdelete	Permanently deletes a closed ticket channel and saves a transcript.
-📈 Leveling & XP
-Command	Description
-/rank [user]	Displays a visual rank card with level and XP.
-/levelboard	Shows the leaderboard for levels.
-/setxp user <user> <amount>	Sets the XP of a specific user. (Staff)
-/setlevelrole <level> <role>	Sets a role as a reward for reaching a level. (Staff)
-/removelevelrole <level>	Removes a role reward from a level. (Staff)
-💰 Economy
-Command	Description
-/balance [user]	Checks the balance (wallet and bank).
-/daily	Claims your daily coin reward.
-/leaderboard	Shows the leaderboard of the wealthiest users.
-/give <user> <amount>	Gives coins to another user.
-/gamble <amount>	Takes a gamble with a 50% chance to double your stake.
-/invest <amount>	Invests your coins with a chance of profit or loss after 24 hours.
-`/bank deposit <amount	all>`
-`/bank withdraw <amount	all>`
-/rep <user>	Gives a reputation point to a user (once every 24 hours).
-🎉 Fun & Community
-Command	Description
-/poll <question> <options...>	Creates a poll with up to 5 options.
-/suggest <idea>	Submits a suggestion for the server.
-/meme [subreddit]	Fetches a random meme from Reddit.
-/8ball <question>	Asks the magical 8-ball for advice.
-/ship <user1> <user2>	Calculates love compatibility.
-/roast <user>	Delivers a funny (but friendly) roast.
-/hug, /pat, /slap <user>	Interaction commands.
-/urban <term>	Searches Urban Dictionary for a term (NSFW channels only).
-⚙️ General & Utility
-Command	Description
-/about	Shows information about the bot, including the original creator.
-/ping	Checks the bot's reaction speed (latency).
-/uptime	Shows how long the bot has been online.
-/userinfo [user]	Shows detailed information about a user.
-/serverinfo	Displays detailed statistics about the server.
-/remindme <time> <reminder>	Sets a personal reminder.
-/afk [status]	Sets or removes your AFK status.
-/tag use <name>	Uses a reusable, custom tag.
-/botinvite	Generates an invite link for the bot.
-🤝 Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+```
+Bot connected
+Commands synced
+Eltrix is online
+```
 
-If you have a suggestion that would make this project better, please fork the repository and create a pull request. You can also simply open an Issue with the tag "enhancement".
+---
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-📜 License
-This project is distributed under the MIT License. This means you are free to use, modify, and distribute the code, as long as you include the original license and copyright notice.
+# 📋 Command Overview
 
-Copyright (c) 2025 [Eltrix-Dot]
+All commands use **Discord Slash Commands**
+
+---
+
+## 🛡️ Moderation
+
+| Command        | Description           |
+| -------------- | --------------------- |
+| /warn          | Warn a user           |
+| /warnings      | View user warnings    |
+| /clearwarnings | Remove warnings       |
+| /mute          | Timeout a user        |
+| /kick          | Kick a member         |
+| /ban           | Ban a member          |
+| /softban       | Ban + delete messages |
+| /purge         | Delete messages       |
+| /lock          | Lock a channel        |
+| /unlock        | Unlock a channel      |
+| /lockdown      | Lock entire server    |
+
+---
+
+## 🎟️ Ticket System
+
+| Command       | Description         |
+| ------------- | ------------------- |
+| /ticketsetup  | Create ticket panel |
+| /ticketclaim  | Claim a ticket      |
+| /ticketadd    | Add user to ticket  |
+| /ticketremove | Remove user         |
+| /ticketdelete | Delete ticket       |
+
+---
+
+## 📈 Leveling System
+
+| Command          | Description       |
+| ---------------- | ----------------- |
+| /rank            | Show rank card    |
+| /levelboard      | XP leaderboard    |
+| /setxp           | Set XP            |
+| /setlevelrole    | Add level role    |
+| /removelevelrole | Remove level role |
+
+---
+
+## 💰 Economy
+
+| Command        | Description     |
+| -------------- | --------------- |
+| /balance       | Show balance    |
+| /daily         | Daily reward    |
+| /leaderboard   | Richest users   |
+| /give          | Send coins      |
+| /gamble        | 50% gamble      |
+| /invest        | 24h investment  |
+| /bank deposit  | Deposit coins   |
+| /bank withdraw | Withdraw coins  |
+| /rep           | Give reputation |
+
+---
+
+## 🎉 Fun Commands
+
+| Command         | Description          |
+| --------------- | -------------------- |
+| /poll           | Create a poll        |
+| /suggest        | Submit suggestion    |
+| /meme           | Random meme          |
+| /8ball          | Ask the magic ball   |
+| /ship           | Love compatibility   |
+| /roast          | Friendly roast       |
+| /hug /pat /slap | Interaction commands |
+
+---
+
+## ⚙️ Utility
+
+| Command     | Description   |
+| ----------- | ------------- |
+| /ping       | Check latency |
+| /uptime     | Bot uptime    |
+| /userinfo   | User info     |
+| /serverinfo | Server stats  |
+| /remindme   | Reminder      |
+| /afk        | AFK status    |
+| /botinvite  | Invite link   |
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added AmazingFeature"
+```
+
+4. Push the branch
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+5. Open a **Pull Request**
+
+---
+
+# 📜 License
+
+Distributed under the **MIT License**
+
+Copyright © 2025
+**Eltrix-Dot**
+
+---
+
+# ⭐ Support
+
+If you like the project:
+
+⭐ **Star the repository**
+🍴 **Fork it**
+🛠 **Contribute**
+
+---
+
+💡 Built with **Python & Discord.py**
+
+---
+
