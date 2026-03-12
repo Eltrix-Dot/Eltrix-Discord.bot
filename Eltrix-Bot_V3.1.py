@@ -28,7 +28,7 @@ import json
 # Fill in your bot's details and server-specific IDs below.
 
 # Bot Token=
-TOKEN = "Your_Bot_Token, Dont share with anyone i recommend to put it in a .env" #The token of your bot Get via https://discord.com/developers and do the steps as listed dont 
+TOKEN = "Your_Bot_Token, Dont share with anyone i recommend to put it in a .env" #The token of your bot Get via https://discord.com/developers and do the steps as listed dont share the Token put it in a .Env file 
 
 # Guild ID=
 GUILD_ID = 1234 # Your Server/Guild ID
