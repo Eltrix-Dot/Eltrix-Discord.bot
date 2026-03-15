@@ -33,7 +33,7 @@ Before running the bot, you must create an application on the [Discord Developer
 
 ## ⚙️ Configuration
 
-Open `ELTRIX.py` and fill in the configuration section at the top (Lines 32-86):
+Open `Eltrix-Bot_V3.1.py` and fill in the configuration section at the top (Lines 32-86):
 
 - **TOKEN**: Paste your bot token from the developer portal.
 - **GUILD_ID**: Your server's ID (Enable Developer Mode in Discord to right-click and copy ID).
@@ -47,7 +47,7 @@ Open `ELTRIX.py` and fill in the configuration section at the top (Lines 32-86):
 Once configured, run the bot from your terminal:
 
 ```bash
-python ELTRIX.py
+python Eltrix-Bot_V3.1.py
 ```
 
 Check the terminal for the "✅ Bot Online & Ready!" message.
