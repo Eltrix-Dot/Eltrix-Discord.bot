@@ -90,7 +90,7 @@ pip install -r requirements.txt
 Open:
 
 ```
-ELTRIX.py
+Eltrix-Bot_V3.1.py
 ```
 
 Edit the configuration section.
