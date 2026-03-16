@@ -41,7 +41,7 @@ Open `Eltrix-Bot_V3.1.py` and fill in the configuration section at the top (Line
 - **STAFF_ROLE_IDS**: Add the role IDs for your staff members.
 - **OWNER_ID**: Your own Discord User ID.
 - **Additional IDs**: Fill in ticket categories, suggestion channels, and welcome channels as needed.
-
+Further in the code there are more IDS you can fil in fore more functions it goes to line 188
 ## 🚀 Running the Bot
 
 Once configured, run the bot from your terminal:
